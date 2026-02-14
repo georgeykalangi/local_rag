@@ -1,0 +1,33 @@
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+  min_chunk_size: 100
+
+embeddings:
+  provider: "local"
+  local_model: "all-MiniLM-L6-v2"
+  openai_model: "text-embedding-3-small"
+  voyage_model: "voyage-3"
+  batch_size: 64
+
+indexing:
+  supported_extensions:
+    - .pdf
+    - .md
+    - .txt
+    - .py
+    - .js
+    - .ts
+    - .docx
+    - .rst
+  max_file_size_mb: 10
+  ignore_file: ".ragignore"
+  recursive: true
+
+retrieval:
+  default_top_k: 5
+  similarity_threshold: 0.3
+
+storage:
+  chroma_persist_dir: "~/.local_rag/chroma_db"
+  collection_name: "default"

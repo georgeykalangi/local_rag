@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-rag"
+version = "0.1.0"
+description = "Local RAG system with MCP server for Claude Code"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=2.0",
+    "chromadb>=1.0",
+    "sentence-transformers>=3.0",
+    "pymupdf>=1.24",
+    "python-docx>=1.1",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+voyage = ["voyageai>=0.3"]
+all = ["local-rag[openai,voyage]"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
