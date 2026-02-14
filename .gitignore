@@ -7,3 +7,13 @@ build/
 .eggs/
 *.egg
 .DS_Store
+
+# ChromaDB data
+~/.local_rag/
+
+# Example data
+example_data/
+sample.txt
+mcp_example.md
+mcp_docs/
+sample_docs/

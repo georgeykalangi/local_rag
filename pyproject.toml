@@ -22,6 +22,9 @@ voyage = ["voyageai>=0.3"]
 all = ["local-rag[openai,voyage]"]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
 
+[project.scripts]
+local-rag = "local_rag.server:mcp"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
