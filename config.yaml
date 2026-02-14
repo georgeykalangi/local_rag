@@ -4,10 +4,8 @@ chunking:
   min_chunk_size: 100
 
 embeddings:
-  provider: "local"
-  local_model: "all-MiniLM-L6-v2"
-  openai_model: "text-embedding-3-small"
-  voyage_model: "voyage-3"
+  provider: local
+  local_model: all-MiniLM-L6-v2
   batch_size: 64
 
 indexing:
@@ -21,7 +19,7 @@ indexing:
     - .docx
     - .rst
   max_file_size_mb: 10
-  ignore_file: ".ragignore"
+  ignore_file: .ragignore
   recursive: true
 
 retrieval:
@@ -29,5 +27,5 @@ retrieval:
   similarity_threshold: 0.3
 
 storage:
-  chroma_persist_dir: "~/.local_rag/chroma_db"
-  collection_name: "default"
+  chroma_persist_dir: ~/.local_rag/chroma_db
+  collection_name: default
