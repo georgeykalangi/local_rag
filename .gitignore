@@ -18,3 +18,16 @@ mcp_example.md
 mcp_docs/
 sample_docs/
 test_docs/
+
+# Sensitive files
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.yaml
+api_keys.txt
+
+# User data
+my_docs/
+*.pdf
